@@ -26,6 +26,8 @@ app.use('/api', require('./api/movies'));
 app.use('/api', require('./api/genres'));
 app.use('/api', require('./api/guestbook'));
 app.use('/api', require('./api/deepThought'));
+app.use('/api', require('./api/todo'));
+//app.use('/api', require('./api/tasks'));
 app.get('/*', function (req, res, next) {
     if (/.js|.html|.css|templates|js|scripts/.test(req.path) || req.xhr) {
         return next({ status: 404, message: 'Not Found' });

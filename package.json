@@ -1,17 +1,16 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
+  "name": "todo",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "webpack && node ./bin/www"
   },
   "dependencies": {
-    "angular": "^1.5.5",
+    "angular": "^1.6.7",
     "angular-animate": "^1.5.5",
     "angular-bootstrap-npm": "^0.14.3",
     "angular-resource": "^1.5.5",
     "angular-touch": "^1.5.5",
-    "angular-ui-router": "^0.3.0",
     "animate.css": "^3.5.1",
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
@@ -21,13 +20,30 @@
     "babel-register": "6.16.3",
     "body-parser": "~1.15.1",
     "bootstrap": "^3.3.7",
+    "bower": "^1.8.2",
     "bower-webpack-plugin": "^0.1.9",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
     "express": "~4.13.4",
     "morgan": "~1.7.0",
+    "node": "^9.3.0",
     "serve-favicon": "~2.3.0",
     "webpack": "^2.1.0-beta.21"
-  }
+  },
+  "description": "todo app",
+  "main": "app.js",
+  "devDependencies": {
+    "angular-ui-router": "^0.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonesdl-2785/todoApp.git"
+  },
+  "author": "diane l jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonesdl-2785/todoApp/issues"
+  },
+  "homepage": "https://github.com/Jonesdl-2785/todoApp#readme"
 }

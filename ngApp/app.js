@@ -3,24 +3,28 @@ import uirouter from 'angular-ui-router';
 import ngResource from 'angular-resource';
 import uiBootstrap from 'angular-bootstrap-npm';
 import {HomeController, AboutController} from './controllers/controllers';
-
+import {todoController} from './controllers/todoController.js';
     angular.module('starterkit', [uirouter, ngResource, uiBootstrap]).config(routing);
 
     routing.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
     function routing($stateProvider, $urlRouterProvider, $locationProvider) {
-        $stateProvider
-          .state('home', {
-            url: '/',
-            templateUrl: '/ngApp/views/home.html',
-            controller: HomeController,
-            controllerAs: 'controller'
-          })
-          .state('about', {
-            url: '/about',
-            templateUrl: '/ngApp/views/about.html',
-            controller: AboutController,
-            controllerAs: 'controller'
-          })
+      $stateProvider.state('Home', {
+           url: '/',
+           templateUrl: '/view/ngApp/todo.html',
+           controller: ProductListController,
+           controllerAs: 'controller'
+      }).state('Details', {
+           url: '/details/:id',
+           templateUrl: '/views/ngApp/details.html',
+           controller: ProductDetailsController,
+           controllerAs: 'controller'
+
+      }).state('Todo', {
+           url: '/todo/:id',
+           templateUrl: '/ngApp/views/todo.html',
+           controller: todoController,
+           controllerAs: 'controller'
+      })
           .state('notFound', {
             url: '/notFound',
             templateUrl: '/ngApp/views/notFound.html'

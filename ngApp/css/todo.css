@@ -1,0 +1,8 @@
+body{
+    background-color: #b7c757;
+}
+
+.complete {
+      text-decoration: line-through;
+      color: #e6f2ff;
+}

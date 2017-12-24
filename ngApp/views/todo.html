@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="ToDo"><!-- Important Step for Angular model-->
+  <head >
+    <meta charset="utf-8">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="./ngApp/css/todo.css" />
+  </head>
+  <body>
+  <div ng-contoller="todoController as vm">
+    <form name="taskForm" ng-submit="addTask()">
+        New Task: <input type="text" ng-model="newtask"  name="newTask" required/><!-- directive is ng-model -->
+        <button ng-click="addTask()" ng-disabled="taskForm.$invalid">Enter</button>
+        <!--button ng-disabled="taskForm.$invalid">Enter</button>-->
+    </form>
+    <button ng-click="taskCompleted()">Completed</button>
+    <h2>Tasks</h2>
+    <ul>
+      <li ng-repeat="task in tasks">
+        <input type="checkbox" ng-model="task.complete" />
+        <span ng-class="{"complete":task.complete}">{{tasks}}</span>
+      </li>
+    </ul>
+    <ui-views></ui-views>
+  </div>
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-resource/angular-resource.min.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="node_modules/angular-bootstrap-npm/dist/angular-bootstrap.min.js"></script>
+<script src="./app.js"></script>
+<script src="./ngApp/controllers/todoController.js"></script>
+    <script>
+
+
+    </script>
+  </body>
+</html>

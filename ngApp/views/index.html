@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="MyApp"><!-- Important Step for Angular model-->
+  <head >
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controllers="homeController as vm">
+    <h1>{{vm.message}}</h1>
+    <input type="text" ng-model="message" /> <br /><!-- directive is ng-model -->
+    <h1>{{message}}</h1>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

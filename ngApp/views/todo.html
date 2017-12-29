@@ -12,12 +12,12 @@
         <button ng-click="addTask()" ng-disabled="taskForm.$invalid">Enter</button>
         <!--button ng-disabled="taskForm.$invalid">Enter</button>-->
     </form>
-    <button ng-click="taskCompleted()">Completed</button>
+    <button ng-click="taskCompleted()">Remove Completed Task</button>
     <h2>Tasks</h2>
     <ul>
       <li ng-repeat="task in tasks">
         <input type="checkbox" ng-model="task.complete" />
-        <span ng-class="{"complete":task.complete}">{{tasks}}</span>
+        <span ng-class="{"complete":task.complete}">{{tasks.title}}</span>
       </li>
     </ul>
     <ui-views></ui-views>

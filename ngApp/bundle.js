@@ -96,12 +96,11 @@ var _todoController = __webpack_require__(8);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _angular2.default.module('starterkit', [_angularUiRouter2.default, _angularResource2.default, _angularBootstrapNpm2.default]).config(routing);
-
 routing.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 function routing($stateProvider, $urlRouterProvider, $locationProvider) {
      $stateProvider.state('Home', {
           url: '/',
-          templateUrl: '/view/ngApp/todo.html',
+          templateUrl: '/ngApp/views/todo.html',
           controller: ProductListController,
           controllerAs: 'controller'
      }).state('Details', {
@@ -48353,9 +48352,9 @@ var AboutController = exports.AboutController = function AboutController() {
 
 
 // todoController.js
-var todo = angular.module('todo');
-controller("todoController", ["$scope", function ($scope) {
-  $scope.tasks = [{ "title": "Enroll in HTML5 & CSS3 Course", "completed": false }];
+//angular.module('ToDo', []).
+var todo = angular.module('ToDo', []).controller("todoController", ["$scope", function ($scope) {
+  $scope.tasks = [{ "title": "Learn Vanilla JavaScript", "completed": false }];
 
   $scope.addTask = function () {
     $scope.tasks.push({ "title": $scope.newTask, "complete": false });

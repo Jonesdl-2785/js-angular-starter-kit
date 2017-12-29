@@ -1,7 +1,7 @@
 // todoController.js
  //angular.module('ToDo', []).
-var todo = angular.module('ToDo', []).
-todo.controller("todoController", ["$scope", function($scope){
+var todo = angular.module('ToDo', []);
+todo.controller("todoController", ["$scope", function ($scope){
   $scope.tasks = [
     {"title":"Learn Vanilla JavaScript","completed": false}
   ];
